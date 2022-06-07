@@ -1,0 +1,49 @@
+List of things to do for the app:
+
+Overview:
+
+Budgeting app
+Screen 1: Welcome Screen [Done]
+Animated Logo [Done]
+
+Screen 2: Login
+Username + Password TextFields [Done]
+Forget Username  [Done] 18th Nov
+Sign up [Done]
+Help button [Done] 18th Nov
+Needs Database [Done]
+(maybe can use firebase -- look into)
+
+Screen 3: Home Dashboard
+Account overview
+Line graph of account history
+Current Budget % and Goal
+Level, XP, Coins
+Daily learning modules/missions
+Add expense button
+Edit budget button
+Go to Settings
+Go to learning modules
+Extra: View Friends
+Extra: View Leaderboards
+
+Screen 4 - X: Learning Modules (APIS)
+Recyclerview of learning modules + estimated time Sourced from API
+Level, EXP, Coins
+Progress Bar
+Continue from before
+
+Screen 5: Edit Budget
+Adjust budget limits
+
+Screen 6: Add/Remove Expense
+Add/Remove/View Expense
+
+Screen 7: Settings Page
+Profile Settings
+Privacy Settings
+Notifications and etc
+
+
+Screen X
+Learning Module X

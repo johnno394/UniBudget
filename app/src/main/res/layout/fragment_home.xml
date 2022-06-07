@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragHomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!-- Top Row (Home, User, Profile Pic) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvUserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="Hi"
+                android:textColor="@color/Default_text"
+                android:textSize="36sp"
+
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/userBadgeImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                app:srcCompat="@drawable/badge1" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- 2nd Row Stores coins and level -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Dashboard">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_layout">
+
+                <ImageView
+                    android:id="@+id/tabCoin"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="8dp"
+                    android:src="@drawable/coin" />
+
+                <TextView
+                    android:id="@+id/coinsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/tabCoin"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_layout">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="8dp"
+                    android:src="@drawable/level" />
+
+                <TextView
+                    android:id="@+id/levelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/img" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- 3rd Row Stores Expenses and Modules complete -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/rounded_layout">
+
+            <ImageView
+                android:id="@+id/tabMoney"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="8dp"
+                android:src="@drawable/bottom_nav_money" />
+
+            <TextView
+                android:id="@+id/expenseNumberTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tabMoney"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/tabMoney"
+                android:text="$"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ExpenseTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expenseNumberTv"
+                android:layout_alignLeft="@id/expenseNumberTv"
+                android:text="Total Spent" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLearn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/rounded_layout">
+
+            <ImageView
+                android:id="@+id/tabLearn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="8dp"
+                android:src="@drawable/bottom_nav_learn" />
+
+            <ProgressBar
+                android:id="@+id/learningProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_alignTop="@+id/tabLearn"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toRightOf="@+id/tabLearn"
+                android:progressDrawable="@drawable/rounded_progress_bar"
+                android:scaleY=".85">
+
+            </ProgressBar>
+
+            <TextView
+                android:id="@+id/moduleProgressBarPercentageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/learningProgressBar"
+                android:layout_alignEnd="@id/learningProgressBar"
+                android:layout_marginRight="5dp"
+
+                android:fontFamily="@font/open_sans_light"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!-- 4th Row Stores Expense at a glance -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="Expenses"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/largeTabExpense"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/rounded_layout"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/progressBarCurrentExpense"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="Current Expenditure vs Goal"
+                android:textStyle="bold"></TextView>
+
+            <ProgressBar
+                android:id="@+id/progressBarCurrentExpense"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_above="@id/currentGoalProgressTv3"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:progressDrawable="@drawable/rounded_progress_bar"
+                android:scaleY=".85"></ProgressBar>
+
+
+            <TextView
+                android:id="@+id/currentGoalTotalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBarCurrentExpense"
+                android:layout_toLeftOf="@id/tvLimit"
+                android:paddingEnd="4dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tvLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBarCurrentExpense"
+                android:layout_alignEnd="@id/progressBarCurrentExpense"
+                android:text="Limit"
+                android:textAlignment="center"></TextView>
+
+            <TextView
+                android:id="@+id/currentGoalProgressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBarCurrentExpense"
+                android:layout_alignStart="@id/progressBarCurrentExpense"
+                android:paddingEnd="4dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/currentGoalProgressTv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/currentGoalStatusTv"
+                android:layout_toRightOf="@+id/currentGoalProgressTv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Spent"
+                android:textAlignment="center"></TextView>
+
+            <TextView
+                android:id="@+id/currentGoalStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/open_sans_light"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDaysRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv4"
+                android:layout_alignRight="@+id/progressBarCurrentExpense"
+                android:text="" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- 5th Row Cash in goal btn -->
+    <LinearLayout
+        android:id="@+id/rowFive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/cashInGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Redeem Goal Reward" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+
+

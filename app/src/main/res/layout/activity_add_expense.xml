@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddExpenseActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Add Expense"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/backArrow"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
+        app:layout_constraintTop_toTopOf="@+id/backArrow" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="52dp"
+        android:hint="Expense Details"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/categoryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseAmountEditText" />
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <EditText
+        android:id="@+id/expenseNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="172dp"
+        android:ems="10"
+        android:hint="Enter Expense Name"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/expenseAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Enter Expense Amount"
+        android:inputType="numberDecimal"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/expenseNameEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/expenseNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/expenseNameEditText" />
+
+    <ImageView
+        android:id="@+id/categoryTravel"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="52dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryTV"
+        app:srcCompat="@drawable/globe" />
+
+    <ImageView
+        android:id="@+id/categoryFood"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryTravel"
+        app:layout_constraintStart_toEndOf="@+id/categoryTravel"
+        app:layout_constraintTop_toTopOf="@+id/categoryTravel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dish" />
+
+    <ImageView
+        android:id="@+id/categoryShopping"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryFood"
+        app:layout_constraintStart_toEndOf="@+id/categoryFood"
+        app:layout_constraintTop_toTopOf="@+id/categoryFood"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/shopping_cart" />
+
+    <ImageView
+        android:id="@+id/categoryEntertainment"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryShopping"
+        app:layout_constraintStart_toEndOf="@+id/categoryShopping"
+        app:layout_constraintTop_toTopOf="@+id/categoryShopping"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/theater" />
+
+    <ImageView
+        android:id="@+id/categoryOther"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryEntertainment"
+        app:layout_constraintStart_toEndOf="@+id/categoryEntertainment"
+        app:layout_constraintTop_toTopOf="@+id/categoryEntertainment"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/other" />
+
+    <Button
+        android:id="@+id/addExpenseButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="Add Expense"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryTV"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <TextView
+        android:id="@+id/expFragExpID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+</androidx.constraintlayout.widget.ConstraintLayout>

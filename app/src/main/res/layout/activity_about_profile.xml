@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutProfileActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="About"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/aboutBackArrow"
+        app:layout_constraintLeft_toRightOf="@id/aboutBackArrow"
+        app:layout_constraintTop_toTopOf="@id/aboutBackArrow">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/aboutBackArrow"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="About us"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutBackArrow" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="52dp"
+        android:text="So you want to learn more about us? Fantastic! We are three brilliant minds from UNSW and have created this app with the goal of inspiring and teaching students about all things finance related.\n\nOur core features consist of a goal and expense tracker as well as proividing a dedicated learning platform.\n\nTaught by the amazing Hamid Samani, we hope to empower students to take control of their finances, and build habits early!\n\nIcons: (source: flaticon.com, fonts.google.com)\n\nFont: Open Sans (source: fonts.google.com)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+</androidx.constraintlayout.widget.ConstraintLayout>

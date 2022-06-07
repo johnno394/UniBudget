@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/categoryImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/expenseNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:text="Expense Name"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/categoryImage"
+                app:layout_constraintTop_toTopOf="@+id/categoryImage" />
+
+            <TextView
+                android:id="@+id/expenseAmountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="-$9999,9999"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/expenseDateTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/expenseNameTv" />
+
+            <TextView
+                android:id="@+id/expenseDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="01/01/2000"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/expenseNameTv"
+                app:layout_constraintTop_toBottomOf="@+id/expenseNameTv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

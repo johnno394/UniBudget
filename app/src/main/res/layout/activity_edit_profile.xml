@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/profileBackArrow"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="Edit Profile"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/profileBackArrow"
+        app:layout_constraintLeft_toRightOf="@id/profileBackArrow"
+        app:layout_constraintTop_toTopOf="@id/profileBackArrow">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="30dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/staticFname"
+        app:layout_constraintTop_toBottomOf="@+id/staticFname" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/staticPword"
+        app:layout_constraintTop_toBottomOf="@+id/staticPword" />
+
+    <ImageView
+        android:id="@+id/btnEditPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPassword"
+        app:layout_constraintStart_toEndOf="@+id/etPassword"
+        app:layout_constraintTop_toTopOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.38"
+        app:srcCompat="@drawable/outline_edit_24" />
+
+    <TextView
+        android:id="@+id/staticFname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="First Name"
+        app:layout_constraintStart_toStartOf="@+id/etUsername"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+    <ImageView
+        android:id="@+id/btnEditLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etLastName"
+        app:layout_constraintStart_toEndOf="@+id/etLastName"
+        app:layout_constraintTop_toTopOf="@+id/etLastName"
+        app:layout_constraintVertical_bias="0.523"
+        app:srcCompat="@drawable/outline_edit_24" />
+
+    <TextView
+        android:id="@+id/staticLName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Last Name"
+        app:layout_constraintStart_toStartOf="@+id/etFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+
+    <TextView
+        android:id="@+id/staticPword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Password"
+        app:layout_constraintStart_toStartOf="@+id/etLastName"
+        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/staticLName"
+        app:layout_constraintTop_toBottomOf="@+id/staticLName" />
+
+    <ImageView
+        android:id="@+id/btnEditFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etFirstName"
+        app:layout_constraintStart_toEndOf="@+id/etFirstName"
+        app:layout_constraintTop_toTopOf="@+id/etFirstName"
+        app:srcCompat="@drawable/outline_edit_24" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/staticUsername"
+        app:layout_constraintTop_toBottomOf="@+id/staticUsername" />
+
+    <TextView
+        android:id="@+id/staticUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="Username"
+        app:layout_constraintStart_toStartOf="@+id/profileBackArrow"
+        app:layout_constraintTop_toBottomOf="@+id/profileBackArrow" />
+
+    <TextView
+        android:id="@+id/tvSaveChangesPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Changes Not Saved!"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveChanges"
+        app:layout_constraintEnd_toEndOf="@+id/btnSaveChanges" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

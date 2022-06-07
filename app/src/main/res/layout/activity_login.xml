@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sign In"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Username/Email"
+        android:inputType="textWebEmailAddress|textPersonName"
+        android:padding="20dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <EditText
+        android:id="@+id/pwdEditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableLeft="@drawable/ic_key"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/usernameEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/usernameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/forgotUsername" />
+
+    <TextView
+        android:id="@+id/forgotUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:text="Forgot Username"
+        app:layout_constraintBottom_toBottomOf="@+id/btnForgotUsername"
+        app:layout_constraintEnd_toStartOf="@+id/btnForgotUsername"
+        app:layout_constraintTop_toTopOf="@+id/btnForgotUsername" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:text="Forgot Password"
+        app:layout_constraintBottom_toBottomOf="@+id/btnForgotPassword"
+        app:layout_constraintEnd_toStartOf="@+id/btnForgotPassword"
+        app:layout_constraintTop_toTopOf="@+id/btnForgotPassword" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="305dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="72dp"
+        android:text="Sign In"
+        app:layout_constraintEnd_toEndOf="@+id/pwdEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pwdEditText"
+        app:layout_constraintTop_toBottomOf="@+id/pwdEditText" />
+
+    <TextView
+        android:id="@+id/signUptv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Don't have an account? Sign up"
+        app:layout_constraintEnd_toEndOf="@+id/signInButton"
+        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+
+    <ImageView
+        android:id="@+id/btnForgotUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="@+id/usernameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEditText"
+        app:srcCompat="@drawable/outline_info_24" />
+
+    <ImageView
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="@+id/pwdEditText"
+        app:layout_constraintTop_toBottomOf="@+id/pwdEditText"
+        app:srcCompat="@drawable/outline_info_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

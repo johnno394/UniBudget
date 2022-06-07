@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopActivity">
+
+    <TextView
+        android:id="@+id/selectedBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Badge Selected:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badge3PriceTv" />
+
+    <ImageView
+        android:id="@+id/backToProfileArrow"
+        android:layout_width="40dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/shopProfileImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/shopIntroTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Hi (Username) you have (coins) avaliable to use!"
+        app:layout_constraintEnd_toEndOf="@id/shopProfileImg"
+        app:layout_constraintStart_toStartOf="@+id/shopProfileImg"
+        app:layout_constraintTop_toBottomOf="@+id/shopProfileImg" />
+
+    <ImageView
+        android:id="@+id/badge1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/badge1Tv"
+        app:layout_constraintStart_toStartOf="@+id/badge1Tv"
+        app:layout_constraintTop_toBottomOf="@+id/badge1Tv"
+        app:srcCompat="@drawable/badge1" />
+
+    <ImageView
+        android:id="@+id/badge2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/badge2Tv"
+        app:layout_constraintStart_toStartOf="@+id/badge2Tv"
+        app:layout_constraintTop_toBottomOf="@+id/badge2Tv"
+        app:srcCompat="@drawable/badge2" />
+
+    <ImageView
+        android:id="@+id/badge3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/badge1"
+        app:layout_constraintStart_toStartOf="@+id/badge1"
+        app:layout_constraintTop_toBottomOf="@+id/badge3Tv"
+        app:srcCompat="@drawable/badge3" />
+
+    <ImageView
+        android:id="@+id/badge4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/badge2"
+        app:layout_constraintStart_toStartOf="@+id/badge2"
+        app:layout_constraintTop_toBottomOf="@+id/badge4Tv"
+        app:srcCompat="@drawable/badge4" />
+
+    <TextView
+        android:id="@+id/badge1Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
+        android:text="A Spare Coin"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopIntroTV" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Shop"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/backToProfileArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/badge1PriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="300 Coins"
+        app:layout_constraintEnd_toEndOf="@+id/badge1"
+        app:layout_constraintStart_toStartOf="@+id/badge1"
+        app:layout_constraintTop_toBottomOf="@+id/badge1" />
+
+    <TextView
+        android:id="@+id/badge2Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="Small Change"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/badge1Tv" />
+
+    <TextView
+        android:id="@+id/badge2PriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="1000 Coins"
+        app:layout_constraintEnd_toEndOf="@+id/badge2"
+        app:layout_constraintStart_toStartOf="@+id/badge2"
+        app:layout_constraintTop_toBottomOf="@+id/badge2" />
+
+    <TextView
+        android:id="@+id/badge3Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Piggy Bank"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/badge1Tv"
+        app:layout_constraintStart_toStartOf="@+id/badge1Tv"
+        app:layout_constraintTop_toBottomOf="@+id/badge1PriceTv" />
+
+    <TextView
+        android:id="@+id/badge4Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cash Pig"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/badge2Tv"
+        app:layout_constraintStart_toStartOf="@+id/badge2Tv"
+        app:layout_constraintTop_toTopOf="@+id/badge3Tv" />
+
+    <TextView
+        android:id="@+id/badge4PriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="9999 Coins"
+        app:layout_constraintEnd_toEndOf="@+id/badge4"
+        app:layout_constraintStart_toStartOf="@+id/badge4"
+        app:layout_constraintTop_toBottomOf="@+id/badge4" />
+
+    <TextView
+        android:id="@+id/badge3PriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="5000 Coins"
+        app:layout_constraintEnd_toEndOf="@+id/badge3"
+        app:layout_constraintStart_toStartOf="@+id/badge3"
+        app:layout_constraintTop_toBottomOf="@+id/badge3" />
+
+    <Button
+        android:id="@+id/purchaseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Confirm Purchase"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedBadge"
+        app:layout_constraintVertical_bias="0.063" />
+</androidx.constraintlayout.widget.ConstraintLayout>

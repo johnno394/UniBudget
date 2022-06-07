@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Create Goal"
+        android:textColor="@color/Default_text"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/secondHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Let's set a goal.\nStart something big."
+        android:textColor="@color/Default_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/secondHeader4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="I'd Like to save:"
+        android:textColor="@color/Default_text"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/secondHeader"
+        app:layout_constraintTop_toBottomOf="@+id/secondHeader" />
+
+    <TextView
+        android:id="@+id/secondHeader5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Within:"
+        android:textColor="@color/Default_text"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/secondHeader4"
+        app:layout_constraintTop_toBottomOf="@+id/enterAmountEditText" />
+
+    <EditText
+        android:id="@+id/enterAmountEditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableLeft="@drawable/savingspiggybank"
+        android:drawablePadding="10dp"
+        android:gravity="center|start"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="@+id/secondHeader4"
+        app:layout_constraintTop_toBottomOf="@+id/secondHeader4" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalLengthSpinner" />
+
+    <Spinner
+        android:id="@+id/goalLengthSpinner"
+        android:background="@drawable/edit_text_background"
+        android:padding="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/open_sans"
+        android:minHeight="48dp"
+        android:textColor="@color/Default_text"
+        app:layout_constraintStart_toStartOf="@+id/secondHeader5"
+        app:layout_constraintTop_toBottomOf="@+id/secondHeader5" />
+
+    <TextView
+        android:id="@+id/durationTv"
+        android:layout_width="2dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/addBtn"
+        app:layout_constraintStart_toStartOf="@+id/addBtn"
+        app:layout_constraintTop_toBottomOf="@+id/addBtn" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/goalLengthSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/goalLengthSpinner"
+        app:layout_constraintTop_toTopOf="@+id/goalLengthSpinner"
+        app:srcCompat="@drawable/dropdown" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

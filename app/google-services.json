@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "574433268583",
+    "project_id": "infs3634-group-69",
+    "storage_bucket": "infs3634-group-69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574433268583:android:46aab168373bc2a8dd95c2",
+        "android_client_info": {
+          "package_name": "au.edu.unsw.infs3634.unswgamifiedlearningapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574433268583-u6bukddrq8utf9uc09juvf3hrd1fnduq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBioP3vkcxH5bt5xDaV1Do4hx_a0ouQIkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574433268583-u6bukddrq8utf9uc09juvf3hrd1fnduq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

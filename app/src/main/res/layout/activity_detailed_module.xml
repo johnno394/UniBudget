@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedModuleActivity">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backToModuleListArrow"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="34dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24">
+
+    </androidx.appcompat.widget.AppCompatImageButton>
+
+    <TextView
+        android:id="@+id/moduleNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:textAlignment="center"
+        android:text="Module Name"
+        android:textSize="28sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/backToModuleListArrow"
+        app:layout_constraintStart_toEndOf="@+id/backToModuleListArrow"
+        app:layout_constraintTop_toTopOf="@+id/backToModuleListArrow" />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/YTModule"
+        class="com.google.android.youtube.player.YouTubePlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moduleNameTv" />
+
+    <Button
+        android:id="@+id/playVideoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Play Video"
+        app:layout_constraintEnd_toEndOf="@+id/YTModule"
+        app:layout_constraintStart_toStartOf="@+id/YTModule"
+        app:layout_constraintTop_toBottomOf="@+id/YTModule" />
+
+    <TextView
+        android:id="@+id/introTv"
+        android:layout_width="349dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:text="The following question is to test your understanding of the topic"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/playVideoButton"
+        app:layout_constraintStart_toStartOf="@+id/playVideoButton"
+        app:layout_constraintTop_toBottomOf="@id/playVideoButton"></TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlQuestionContainer"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/introTv"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_layout">
+
+        <TextView
+            android:id="@+id/questionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Question Here"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintTop_toTopOf="@+id/rlQuestionContainer" />
+
+        <TextView
+            android:id="@+id/optionATv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Option A"
+            android:visibility="invisible"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/questionTv" />
+
+        <TextView
+            android:id="@+id/optionBTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Option B"
+            android:visibility="invisible"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/optionATv" />
+
+        <TextView
+            android:id="@+id/optionCTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center"
+            android:text="Option C"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/optionBTv"
+            app:layout_constraintBottom_toBottomOf="@id/rlQuestionContainer"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/selectedOptionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Selected Option: "
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/rlQuestionContainer"
+        app:layout_constraintStart_toStartOf="@+id/rlQuestionContainer"
+        app:layout_constraintTop_toBottomOf="@+id/rlQuestionContainer" />
+
+
+    <Button
+        android:id="@+id/startQuizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Me!"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedOptionTv"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Answers"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/startQuizButton"
+        app:layout_constraintEnd_toEndOf="@+id/startQuizButton"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/startQuizButton"
+        app:layout_constraintTop_toTopOf="@+id/startQuizButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

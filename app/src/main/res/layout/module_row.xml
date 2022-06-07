@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_layout"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/modulePreviewImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="16dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/moduleTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Module Title"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/modulePreviewImage"
+            app:layout_constraintTop_toTopOf="@id/modulePreviewImage" />
+
+        <TextView
+            android:id="@+id/moduleRowID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Module ID"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="12dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintLeft_toLeftOf="@id/moduleTitle"
+            app:layout_constraintTop_toBottomOf="@id/moduleTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
